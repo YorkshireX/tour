@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">游暇</string>
+    <string name="btn_explore">开疆拓土</string>
+    <string name="btn_interest">兴趣社区</string>
+    <string name="btn_store">商城</string>
+    <string name="btn_myField">我的主场</string>
+    <string name="btn_go">逛逛</string>
+    <string name="btn_myCom">我的社区</string>
+    <string name="btn_plan">出游计划</string>
+    <string name="btn_mission">出游任务</string>
+    <string name="btn_collection">徽章收集</string>
+    <string name="btn_myHuiZ">我的徽章</string>
+    <string name="btn_myFootprint">我的足迹</string>
+    <string name="btn_myPost">我的帖子</string>
+    <string name="btn_myFriend">我的好友</string>
+    <string name="btn_myFocus">我的关注</string>
+    <string name="btn_sousuo">确定</string>
+    <string name="txt_ssResult">搜索结果为：</string>
+    <string name="btn_huiZ">徽章大全</string>
+    <string name="item">设置</string>
+
+
+</resources>

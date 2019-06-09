@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.edu.swufe.tour">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".firstPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".explorePage" />
+        <activity android:name=".interest" />
+        <activity android:name=".myField" />
+        <activity android:name=".store" />
+        <activity android:name=".go" />
+        <activity android:name=".myCommunity" />
+        <activity android:name=".plan" />
+        <activity android:name=".mission" />
+        <activity android:name=".collection" />
+        <activity android:name=".place" />
+        <activity android:name=".write"></activity>
+    </application>
+
+</manifest>
