@@ -9,7 +9,6 @@ import android.widget.Button;
 
 public class interest extends AppCompatActivity {
 
-    private Button btn_go;
     private Button btn_myCommunity;
 
 
@@ -17,15 +16,6 @@ public class interest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interest);
-
-        btn_go=(Button)findViewById(R.id.go);
-        btn_go.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent go=new Intent(interest.this,go.class);
-                startActivity(go);
-            }
-        });
 
         btn_myCommunity=(Button)findViewById(R.id.myCommunity);
         btn_myCommunity.setOnClickListener(new View.OnClickListener(){
@@ -38,14 +28,6 @@ public class interest extends AppCompatActivity {
 
     }
 
-    public void openGo(View btn){
-        Log.i("open","openGo");
-        openGo();
-    }
-    private void openGo(){
-        Intent go = new Intent(this,go.class);
-        startActivity(go);
-    }
 
     public void openMyCommunity(View btn){
         Log.i("open","openMyCommunity");

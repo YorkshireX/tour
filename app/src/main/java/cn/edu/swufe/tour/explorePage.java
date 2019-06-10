@@ -10,13 +10,10 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import java.io.IOException;
-
 public class explorePage extends AppCompatActivity {
 
     private Button btn_plan;
     private Button btn_mission;
-    private Button btn_collection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +24,7 @@ public class explorePage extends AppCompatActivity {
         btn_plan.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent plan=new Intent(explorePage.this,plan.class);
+                Intent plan=new Intent(explorePage.this,addPlan.class);
                 startActivity(plan);
             }
         });
@@ -38,15 +35,6 @@ public class explorePage extends AppCompatActivity {
             public void onClick(View v){
                 Intent mission=new Intent(explorePage.this,mission.class);
                 startActivity(mission);
-            }
-        });
-
-        btn_collection=(Button)findViewById(R.id.collection);
-        btn_collection.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent collection=new Intent(explorePage.this,collection.class);
-                startActivity(collection);
             }
         });
 
@@ -76,13 +64,5 @@ public class explorePage extends AppCompatActivity {
         startActivity(mission);
     }
 
-    public void openCollection(View btn){
-        Log.i("open","openCollection");
-        openCollect();
-    }
-    private void openCollect(){
-        Intent collection = new Intent(this,collection.class);
-        startActivity(collection);
-    }
 
 }

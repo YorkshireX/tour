@@ -109,15 +109,9 @@ xxxxxxxxxxxxxxxxxxxxxxxx" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="65dp"
-            android:gravity="bottom">
+            android:gravity="bottom"
+            android:layout_gravity="center">
 
-            <ImageButton
-                android:id="@+id/talk"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginLeft="60dp"
-                android:background="@android:color/holo_orange_light"
-                android:src="@mipmap/talk" />
 
             <ImageButton
                 android:id="@+id/write"

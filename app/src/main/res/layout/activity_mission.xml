@@ -12,13 +12,6 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <Button
-            android:id="@+id/yizhi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light"
-            android:text="益智游戏"
-            android:textSize="50sp" />
 
         <Button
             android:id="@+id/zoubian"
@@ -27,15 +20,6 @@
             android:layout_marginTop="10dp"
             android:background="@android:color/holo_orange_light"
             android:text="走遍景区"
-            android:textSize="50sp" />
-
-        <Button
-            android:id="@+id/picture"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light"
-            android:text="拍照识别"
             android:textSize="50sp" />
 
         <Button

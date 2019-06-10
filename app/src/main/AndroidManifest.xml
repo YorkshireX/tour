@@ -20,13 +20,12 @@
         <activity android:name=".interest" />
         <activity android:name=".myField" />
         <activity android:name=".store" />
-        <activity android:name=".go" />
         <activity android:name=".myCommunity" />
-        <activity android:name=".plan" />
+        <activity android:name=".addPlan" />
         <activity android:name=".mission" />
-        <activity android:name=".collection" />
         <activity android:name=".place" />
-        <activity android:name=".write"></activity>
+        <activity android:name=".write" />
+        <activity android:name=".plan"></activity>
     </application>
 
 </manifest>
