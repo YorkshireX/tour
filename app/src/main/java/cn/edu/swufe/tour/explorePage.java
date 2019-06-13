@@ -13,7 +13,6 @@ import android.widget.ListView;
 public class explorePage extends AppCompatActivity {
 
     private Button btn_plan;
-    private Button btn_mission;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +28,6 @@ public class explorePage extends AppCompatActivity {
             }
         });
 
-        btn_mission=(Button)findViewById(R.id.mission);
-        btn_mission.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent mission=new Intent(explorePage.this,mission.class);
-                startActivity(mission);
-            }
-        });
 
         ListView listView = findViewById(R.id.list);
         String data[] = {"2019.5.1--10：00 西安 秦始皇兵马俑博物馆","2019.5.1--14：00 西安 大唐芙蓉园",
@@ -54,15 +45,6 @@ public class explorePage extends AppCompatActivity {
         Intent plan = new Intent(this,plan.class);
         startActivity(plan);
     }
-
-    public void openMission(View btn){
-        Log.i("open","openMission");
-        openMission();
-    }
-    private void openMission(){
-        Intent mission = new Intent(this,mission.class);
-        startActivity(mission);
-    }
-
+    
 
 }

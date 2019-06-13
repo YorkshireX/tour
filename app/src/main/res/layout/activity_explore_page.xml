@@ -9,25 +9,17 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/plan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="110dp"
+            android:layout_gravity="center"
             android:background="@android:color/holo_orange_light"
             android:onClick="openPlan"
             android:text="@string/btn_plan" />
-
-        <Button
-            android:id="@+id/mission"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light"
-            android:onClick="openMission"
-            android:text="@string/btn_mission" />
 
     </LinearLayout>
 

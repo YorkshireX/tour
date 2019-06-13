@@ -8,7 +8,35 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/sousuo"/>
+
+        <EditText
+            android:id="@+id/suosou"
+            android:layout_marginLeft="15dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:text="确定"
+            android:textSize="20sp"
+            android:background="@android:color/holo_orange_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
         android:id="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="55dp">
 
@@ -37,8 +65,10 @@
 
     <LinearLayout
         android:layout_width="386dp"
-        android:layout_height="447dp"
-        android:orientation="vertical">
+        android:layout_height="451dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -47,74 +77,44 @@
 
             <TextView
                 android:id="@+id/jingdian"
-                android:text="热门景点"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorAccent"
                 android:layout_marginTop="70dp"
+                android:text="热门景点"
+                android:textColor="@color/colorAccent"
                 android:textSize="25sp" />
 
-           <LinearLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-               <ImageView
-                   android:layout_width="150dp"
-                   android:layout_height="100dp"
-                   android:src="@drawable/place1" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/place1" />
 
-               <ImageView
-                   android:layout_width="150dp"
-                   android:layout_height="100dp"
-                   android:src="@drawable/place2" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/place2" />
 
-               <ImageView
-                   android:layout_width="150dp"
-                   android:layout_height="100dp"
-                   android:src="@drawable/place3" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/place3" />
 
-
-           </LinearLayout>
 
             </LinearLayout>
 
-
-        <TextView
-            android:id="@+id/tiezi"
-            android:text="最火帖子"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:textSize="25sp" />
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:src="@mipmap/tz" />
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:src="@mipmap/tz" />
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:src="@mipmap/tz" />
-
-
         </LinearLayout>
+
+
+
         <TextView
             android:id="@+id/jijie"
-            android:text="季节景区"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="季节景区"
             android:textColor="@color/colorAccent"
             android:textSize="25sp" />
 
@@ -144,21 +144,12 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="135dp"
         android:layout_marginTop="405dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-        <ImageButton
-            android:id="@+id/btn_store"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:background="@android:color/holo_orange_light"
-            android:onClick="openStore"
-            android:src="@mipmap/store" />
 
         <ImageButton
             android:id="@+id/btn_myField"
