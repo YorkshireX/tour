@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".plan">
 
+
     <LinearLayout
         android:layout_width="384dp"
         android:layout_height="450dp"
@@ -31,6 +32,7 @@
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
+            android:onClick="openAddPlan"
             android:background="@android:color/holo_orange_light"
             android:src="@mipmap/add1" />
     </LinearLayout>

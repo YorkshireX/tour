@@ -45,6 +45,6 @@ public class explorePage extends AppCompatActivity {
         Intent plan = new Intent(this,plan.class);
         startActivity(plan);
     }
-    
+
 
 }

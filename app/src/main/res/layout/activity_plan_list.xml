@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addPlan">
-
-    <LinearLayout
-        android:layout_width="384dp"
-        android:layout_height="450dp"
-        android:orientation="vertical">
+    android:id="@+id/activity_plan_list"
+    android:orientation="vertical"
+    tools:context=".planList">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,11 +17,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="景区:"
+                android:text="景区:  "
                 android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/et_plan_place"
+            <TextView
+                android:id="@+id/plan_place"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -38,11 +35,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="时间:"
+                android:text="时间:  "
                 android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/et_plan_time"
+            <TextView
+                android:id="@+id/plan_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -62,14 +59,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp">
 
-            <RadioButton
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="药品"
+                android:text="药品:  "
                 android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/et_plan_medi"
+            <TextView
+                android:id="@+id/plan_medi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -80,14 +77,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp">
 
-            <RadioButton
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="衣物"
+                android:text="衣物:  "
                 android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/et_plan_cloth"
+            <TextView
+                android:id="@+id/plan_cloth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -98,14 +95,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp">
 
-            <RadioButton
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="证件"
+                android:text="证件:  "
                 android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/et_plan_card"
+            <TextView
+                android:id="@+id/plan_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -116,14 +113,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp">
 
-            <RadioButton
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="防晒"
+                android:text="防晒:  "
                 android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/et_plan_sun"
+            <TextView
+                android:id="@+id/plan_sun"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -134,14 +131,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp">
 
-            <RadioButton
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="雨伞"
+                android:text="雨伞:  "
                 android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/et_plan_rain"
+            <TextView
+                android:id="@+id/plan_rain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -152,35 +149,17 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp">
 
-            <RadioButton
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="其他"
+                android:text="其他:  "
                 android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/et_plan_other"
+            <TextView
+                android:id="@+id/plan_other"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btn_add"
-            android:layout_width="50dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="10dp"
-            android:background="@android:color/holo_orange_light"
-            android:text="添加"
-            android:layout_gravity="center"
-            android:textSize="20sp" />
-    </LinearLayout>
-</android.support.constraint.ConstraintLayout>

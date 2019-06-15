@@ -6,158 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".firstPage">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:id="@+id/relativeLayout">
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@mipmap/sousuo"/>
-
-        <EditText
-            android:id="@+id/suosou"
-            android:layout_marginLeft="15dp"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btn_sure"
-            android:text="确定"
-            android:textSize="20sp"
-            android:background="@android:color/holo_orange_light"
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="成都周边古镇"
+            android:textSize="24sp"/>
 
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_place"
+        android:layout_width="386dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+
+    </ListView>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
-        android:id="@+id/linearLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
         android:layout_width="wrap_content"
-        android:layout_height="55dp">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
 
         <ImageButton
             android:id="@+id/btn_explore"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="28dp"
             android:background="@android:color/holo_orange_light"
             android:onClick="openEx"
             android:src="@mipmap/explore" />
 
-        <ImageButton
-            android:id="@+id/btn_interest"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="36dp"
-            android:background="@android:color/holo_orange_light"
-            android:onClick="openIn"
-            android:src="@mipmap/interest" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="386dp"
-        android:layout_height="451dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout3">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/jingdian"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
-                android:text="热门景点"
-                android:textColor="@color/colorAccent"
-                android:textSize="25sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/place1" />
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/place2" />
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/place3" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-
-
-        <TextView
-            android:id="@+id/jijie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="季节景区"
-            android:textColor="@color/colorAccent"
-            android:textSize="25sp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:src="@drawable/place3" />
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:src="@drawable/place1" />
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="70dp"
-                android:src="@drawable/place2" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="135dp"
-        android:layout_marginTop="405dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-        <ImageButton
-            android:id="@+id/btn_myField"
-            android:layout_width="190dp"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_orange_light"
-            android:onClick="openMyFiled"
-            android:src="@mipmap/touxiang" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
 

@@ -23,52 +23,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/sign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="个性签名:"
-                android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/gexing"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/star1"
-                    android:layout_width="55dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/fire" />
-
-                <ImageView
-                    android:id="@+id/star2"
-                    android:layout_width="55dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/fire" />
-
-                <ImageView
-                    android:id="@+id/star3"
-                    android:layout_width="55dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/fire" />
-
-                <ImageView
-                    android:id="@+id/star4"
-                    android:layout_width="55dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/fire1" />
-
-                <ImageView
-                    android:id="@+id/star5"
-                    android:layout_width="55dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/fire1" />
-            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -101,25 +57,6 @@
             android:text="@string/btn_myPost"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/myFriend"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/holo_orange_light"
-            android:gravity="center"
-            android:text="@string/btn_myFriend"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/myFocus"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/holo_orange_light"
-            android:gravity="center"
-            android:text="@string/btn_myFocus"
-            android:textSize="20sp" />
 
     </LinearLayout>
 

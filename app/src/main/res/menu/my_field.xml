@@ -4,7 +4,24 @@
 
     <item
         android:id="@+id/menu_myField"
-        android:icon="@mipmap/setting_icon"
-        android:title="@string/item"
-        app:showAsAction="always" />
+        android:icon="@mipmap/person"
+        android:title="个人中心"
+        app:showAsAction="always" >
+        <menu>
+            <item
+                android:id="@+id/tiezi"
+                android:orderInCategory="100"
+                android:title="我的帖子"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/myFootprint"
+                android:orderInCategory="200"
+                android:title="我的足迹"
+              app:showAsAction="never" />
+
+       </menu>
+    </item>
+
+
+
 </menu>
