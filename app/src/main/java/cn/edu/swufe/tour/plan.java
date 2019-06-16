@@ -1,15 +1,18 @@
 package cn.edu.swufe.tour;
 
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
@@ -18,25 +21,25 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class plan extends ListActivity implements AdapterView.OnItemClickListener {
-    private ArrayList<HashMap<String, String>> listItems; // 存放文字、图片信息
-    private SimpleAdapter listItemAdapter; // 适配器
-    private int msgWhat = 7;
-    Handler handler;
+public class plan extends AppCompatActivity{
+
     public final String TAG = "plan";
     private ImageButton add;
+    private List<PlanInfo> planList=new ArrayList<>();
+    private ListView planlist;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_plan);
+        setContentView(R.layout.activity_plan);
 
-        initListView();
-        this.setListAdapter(listItemAdapter);
+        initPlanInfo();
+        planAdapter adapter=new planAdapter(plan.this,R.layout.activity_plan_item,planList);
 
-        ListAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
-        setListAdapter(adapter);
-        List<Map<String,Object>> planlist = new ArrayList<Map<String,Object>>();
+
+        ListView list_plan = (ListView) findViewById(R.id.planlist);
+        list_plan.setAdapter(adapter);
 
         add = findViewById(R.id.add);
         add.setOnClickListener(new View.OnClickListener(){
@@ -48,7 +51,7 @@ public class plan extends ListActivity implements AdapterView.OnItemClickListene
         });
 
 
-        Intent intent = getIntent();
+       /* Intent intent = getIntent();
         String place = intent.getStringExtra("plan_place");
         String time = intent.getStringExtra("plan_time");
         String other = intent.getStringExtra("plan_other");
@@ -67,8 +70,23 @@ public class plan extends ListActivity implements AdapterView.OnItemClickListene
         Log.i(TAG,"onCreate: sun=" + sun);
         Log.i(TAG,"onCreate: rain=" + rain);
 
-        getListView().setOnItemClickListener(this);
+        */
 
+
+    }
+
+    private void initPlanInfo() {
+        for(int i=0;i<2;i++){
+            TextView plantime = findViewById(R.id.plan_time);
+            TextView planplace = findViewById(R.id.plan_place);
+
+            String pt = plantime.getText().toString();
+            String pp = planplace.getText().toString();
+
+
+            PlanInfo newPlan = new PlanInfo(pt,pp);
+            planList.add(newPlan);
+        }
     }
 
     public void openAddPlan(View btn){
@@ -81,7 +99,7 @@ public class plan extends ListActivity implements AdapterView.OnItemClickListene
     }
 
 
-    @Override
+   /* @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         Log.i(TAG, "onItemClick: parent=" + parent);
@@ -122,7 +140,7 @@ public class plan extends ListActivity implements AdapterView.OnItemClickListene
         listItemAdapter = new SimpleAdapter(this, listItems, // listItems数据源
                 R.layout.activity_plan_item, // ListItem的XML布局实现
                 new String[] { "ItemTime", "ItemPlace" },
-                new int[] { R.id.itemTime, R.id.itemPlace }
+                new int[] { R.id.planTime, R.id.planPlace }
         );
-    }
+    } */
 }

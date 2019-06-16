@@ -16,7 +16,7 @@
             <item
                 android:id="@+id/myFootprint"
                 android:orderInCategory="200"
-                android:title="我的足迹"
+                android:title="我的计划"
               app:showAsAction="never" />
 
        </menu>

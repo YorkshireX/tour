@@ -12,21 +12,12 @@ import android.widget.ListView;
 
 public class explorePage extends AppCompatActivity {
 
-    private Button btn_plan;
+    private Button card;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explore_page);
-
-        btn_plan=(Button)findViewById(R.id.plan);
-        btn_plan.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent plan=new Intent(explorePage.this,addPlan.class);
-                startActivity(plan);
-            }
-        });
 
 
         ListView listView = findViewById(R.id.list);
@@ -37,14 +28,7 @@ public class explorePage extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
-    public void openPlan(View btn){
-        Log.i("open","openPlan");
-        openPlan();
-    }
-    private void openPlan(){
-        Intent plan = new Intent(this,plan.class);
-        startActivity(plan);
-    }
+
 
 
 }

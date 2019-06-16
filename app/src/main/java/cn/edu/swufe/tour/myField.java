@@ -21,7 +21,7 @@ public class myField extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_field);
+       // setContentView(R.layout.activity_my_field);
         
         menu_person = (Toolbar)findViewById(R.id.menu_myField);
         setSupportActionBar(menu_person);
@@ -37,7 +37,7 @@ public class myField extends AppCompatActivity {
         int base = Menu.FIRST;
 
         SubMenu subMenu1 = menu.addSubMenu("我的帖子");
-        SubMenu subMenu2 = menu.addSubMenu("我的足迹");
+        SubMenu subMenu2 = menu.addSubMenu("我的计划");
 
 
         //menu.add(1,1,1,"我的帖子").setIntent(new Intent(this,tiezi.class));

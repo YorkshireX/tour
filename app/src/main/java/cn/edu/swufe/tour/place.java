@@ -7,32 +7,23 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class place extends AppCompatActivity {
 
-    ImageButton btn_write;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place);
 
-        btn_write=(ImageButton)findViewById(R.id.write);
-        btn_write.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent write=new Intent(place.this,write.class);
-                startActivity(write);
-            }
-        });
-    }
-
-    public void openWr(View btn){
-        Log.i("open","openWi");
-        openWrite();
-    }
-    private void openWrite(){
-        Intent write = new Intent(this,write.class);
-        startActivity(write);
+        Bundle bundle=getIntent().getExtras();
+        int id=bundle.getInt("photo");
+        String message=bundle.getString("message");
+        ImageView Iv_place=(ImageView) findViewById(R.id.Iv_place);
+        Iv_place.setImageResource(id);
+        TextView tv=(TextView) findViewById(R.id.place_message);
+        tv.setText(message);
     }
 }

@@ -28,7 +28,8 @@
         <activity android:name=".planList" />
         <activity android:name=".planItem" />
         <activity android:name=".tiezi" />
-        <activity android:name=".place_item"></activity>
+        <activity android:name=".place_item" />
+        <activity android:name=".tiezi_item"></activity>
     </application>
 
 </manifest>
