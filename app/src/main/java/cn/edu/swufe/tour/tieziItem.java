@@ -3,7 +3,7 @@ package cn.edu.swufe.tour;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class tiezi_item extends AppCompatActivity {
+public class tieziItem extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

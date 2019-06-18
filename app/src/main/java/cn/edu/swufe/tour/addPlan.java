@@ -51,7 +51,7 @@ public class addPlan extends AppCompatActivity {
         btn_add.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent plan =new Intent(addPlan.this,planList.class);
+                Intent intent =new Intent(addPlan.this,planAdapter.class);
 
                 //显示数据到控件
                 String plan_place = et_plan_place.getText().toString();
@@ -63,14 +63,14 @@ public class addPlan extends AppCompatActivity {
                 String plan_sun = et_plan_sun.getText().toString();
                 String plan_rain = et_plan_rain.getText().toString();
 
-                plan.putExtra("plan_place",plan_place);
-                plan.putExtra("plan_time",plan_time);
-                plan.putExtra("plan_other", plan_other);
-                plan.putExtra("plan_medi", plan_medi);
-                plan.putExtra("plan_cloth", plan_cloth);
-                plan.putExtra("plan_card", plan_card);
-                plan.putExtra("plan_sun", plan_sun);
-                plan.putExtra("plan_rain",plan_rain);
+                intent.putExtra("plan_place",plan_place);
+                intent.putExtra("plan_time",plan_time);
+                intent.putExtra("plan_other", plan_other);
+                intent.putExtra("plan_medi", plan_medi);
+                intent.putExtra("plan_cloth", plan_cloth);
+                intent.putExtra("plan_card", plan_card);
+                intent.putExtra("plan_sun", plan_sun);
+                intent.putExtra("plan_rain",plan_rain);
 
                 Log.i(TAG,"openPlan: plan_place = " + plan_place);
                 Log.i(TAG,"openPlan: plan_time = " + plan_time);
@@ -81,7 +81,8 @@ public class addPlan extends AppCompatActivity {
                 Log.i(TAG,"openPlan: plan_sun = " + plan_sun);
                 Log.i(TAG,"openPlan: plan_rain = " + plan_rain);
 
-                startActivity(plan);
+                setResult(1,intent);
+                finish();
             }
 
         });
