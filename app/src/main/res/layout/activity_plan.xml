@@ -23,7 +23,7 @@
             android:id="@+id/btn_getDataPlan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_addView"
+            android:layout_below="@+id/ll_addViewPlan"
             android:layout_marginTop="10dp"
             android:text="获取数据" />
     </RelativeLayout>

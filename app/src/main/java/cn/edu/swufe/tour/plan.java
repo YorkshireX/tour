@@ -129,23 +129,23 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
     private void sortPlanViewItem() {
         //获取LinearLayout里面所有的view
         for (int i = 0; i < addPlanNameView.getChildCount(); i++) {
-            final View childAt = addPlanNameView.getChildAt(i);
-            final Button btn_remove = (Button) childAt.findViewById(R.id.btn_addPlan);
-            btn_remove.setText("删除");
-            btn_remove.setTag("remove");//设置删除标记
-            btn_remove.setOnClickListener(new View.OnClickListener() {
+            final View childAtPlan = addPlanNameView.getChildAt(i);
+            final Button btn_removePlan = (Button) childAtPlan.findViewById(R.id.btn_addPlan);
+            btn_removePlan.setText("删除");
+            btn_removePlan.setTag("remove");//设置删除标记
+            btn_removePlan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //从LinearLayout容器中删除当前点击到的ViewItem
-                    addPlanNameView.removeView(childAt);
+                    addPlanNameView.removeView(childAtPlan);
                 }
             });
             //如果是最后一个ViewItem，就设置为添加
             if (i == (addPlanNameView.getChildCount() - 1)) {
-                Button btn_add = (Button) childAt.findViewById(R.id.btn_addPlan);
-                btn_add.setText("+添加");
-                btn_add.setTag("add");
-                btn_add.setOnClickListener(this);
+                Button btn_addPlan = (Button) childAtPlan.findViewById(R.id.btn_addPlan);
+                btn_addPlan.setText("+添加");
+                btn_addPlan.setTag("add");
+                btn_addPlan.setOnClickListener(this);
             }
         }
     }
@@ -153,11 +153,11 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
     //添加ViewItem
     private void addViewItemPlan(View view) {
         if (addPlanNameView.getChildCount() == 0) {//如果一个都没有，就添加一个
-            View planView = View.inflate(this, R.layout.activity_place_item, null);
-            Button btn_add = (Button) planView.findViewById(R.id.btn_addPlan);
-            btn_add.setText("+添加");
-            btn_add.setTag("add");
-            btn_add.setOnClickListener(this);
+            View planView = View.inflate(this, R.layout.activity_plan_item, null);
+            Button btn_addPlan = (Button) planView.findViewById(R.id.btn_addPlan);
+            btn_addPlan.setText("+添加");
+            btn_addPlan.setTag("add");
+            btn_addPlan.setOnClickListener(this);
             addPlanNameView.addView(planView);
             //sortTieziViewItem();
         } else if (((String) view.getTag()).equals("add")) {//如果有一个以上的Item,点击为添加的Item则添加
@@ -172,14 +172,14 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
 
     private void printDataPlan() {
         for (int i = 0; i < addPlanNameView.getChildCount(); i++) {
-            View childAt = addPlanNameView.getChildAt(i);
-            EditText planPlace = (EditText) childAt.findViewById(R.id.et_plan_place);
-            EditText planTime = (EditText) childAt.findViewById(R.id.et_plan_time);
-            EditText planCloth = (EditText) childAt.findViewById(R.id.et_plan_cloth);
-            EditText planCard = (EditText) childAt.findViewById(R.id.et_plan_card);
-            EditText planSun = (EditText) childAt.findViewById(R.id.et_plan_sun);
-            EditText planRain = (EditText) childAt.findViewById(R.id.et_plan_rain);
-            EditText planOther = (EditText) childAt.findViewById(R.id.et_plan_other);
+            View childAtPlan = addPlanNameView.getChildAt(i);
+            EditText planPlace = (EditText) childAtPlan.findViewById(R.id.et_plan_place);
+            EditText planTime = (EditText) childAtPlan.findViewById(R.id.et_plan_time);
+            EditText planCloth = (EditText) childAtPlan.findViewById(R.id.et_plan_cloth);
+            EditText planCard = (EditText) childAtPlan.findViewById(R.id.et_plan_card);
+            EditText planSun = (EditText) childAtPlan.findViewById(R.id.et_plan_sun);
+            EditText planRain = (EditText) childAtPlan.findViewById(R.id.et_plan_rain);
+            EditText planOther = (EditText) childAtPlan.findViewById(R.id.et_plan_other);
 
             planPlace.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
             planPlace.setGravity(Gravity.TOP);
