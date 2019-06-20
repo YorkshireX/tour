@@ -1,51 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".tiezi">
 
-    <ListView
-        android:id="@+id/mytz"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:textSize="20sp"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/ll_addView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
 
         <Button
-            android:id="@+id/tzx"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_getData"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/mytz"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="61dp"
-            android:layout_marginRight="61dp"
-            android:text="写"
-            android:textSize="25sp" />
-
-        <ImageButton
-            android:id="@+id/tz_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="86dp"
-            android:layout_marginLeft="86dp"
-            android:layout_marginBottom="0dp"
-            android:src="@mipmap/home" />
-
-    </LinearLayout>
+            android:layout_below="@+id/ll_addView"
+            android:layout_marginTop="10dp"
+            android:text="获取数据" />
+    </RelativeLayout>
 
 
-
-</RelativeLayout>
+</ScrollView>

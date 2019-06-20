@@ -5,24 +5,31 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class tieziAdapter extends BaseAdapter {
 
     private Context context;
+    private LayoutInflater inflater;
+
 
     HashMap<Integer, String> saveMap;//这个集合用来存储对应位置上Editext中的文本内容
 
     public tieziAdapter(Context context){
         super();
         this.context = context;
+        inflater = LayoutInflater.from(context);
         saveMap = new HashMap<Integer, String>();
+
     }
 
     @Override
@@ -32,12 +39,12 @@ public class tieziAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return position;
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
@@ -46,7 +53,7 @@ public class tieziAdapter extends BaseAdapter {
         if (convertView == null) {
             vh = new ViewHolder();
             convertView = View.inflate(context, R.layout.activity_tiezi_item, null);
-            vh.et_tiezi = (EditText) convertView.findViewById(R.id.et_tiezi);
+            vh.et_tiezi = (EditText) convertView.findViewById(R.id.ed_tieziEvaluate);
             convertView.setTag(vh);
         } else {
             vh = (ViewHolder) convertView.getTag();
