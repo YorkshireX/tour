@@ -20,12 +20,8 @@
         </activity>
         <activity android:name=".explorePage" />
         <activity android:name=".myField" />
-        <activity android:name=".myCommunity" />
-        <activity android:name=".addPlan" />
         <activity android:name=".place" />
-        <activity android:name=".write" />
         <activity android:name=".plan" />
-        <activity android:name=".planList" />
         <activity android:name=".planItem" />
         <activity android:name=".tiezi" />
         <activity android:name=".place_item" />

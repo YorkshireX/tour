@@ -1,8 +1,12 @@
 package cn.edu.swufe.tour;
 
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +17,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -24,6 +29,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -176,6 +182,7 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
             View childAtPlan = addPlanNameView.getChildAt(i);
             EditText planPlace = (EditText) childAtPlan.findViewById(R.id.et_plan_place);
             EditText planTime = (EditText) childAtPlan.findViewById(R.id.et_plan_time);
+            EditText planMedi = (EditText) childAtPlan.findViewById(R.id.et_plan_medi);
             EditText planCloth = (EditText) childAtPlan.findViewById(R.id.et_plan_cloth);
             EditText planCard = (EditText) childAtPlan.findViewById(R.id.et_plan_card);
             EditText planSun = (EditText) childAtPlan.findViewById(R.id.et_plan_sun);
@@ -192,15 +199,15 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
             planTime.setSingleLine(false);
             planTime.setHorizontallyScrolling(false);
 
+            planMedi.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+            planMedi.setGravity(Gravity.TOP);
+            planMedi.setSingleLine(false);
+            planMedi.setHorizontallyScrolling(false);
+
             planCloth.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
             planCloth.setGravity(Gravity.TOP);
             planCloth.setSingleLine(false);
             planCloth.setHorizontallyScrolling(false);
-
-            planCard.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
-            planCard.setGravity(Gravity.TOP);
-            planCard.setSingleLine(false);
-            planCard.setHorizontallyScrolling(false);
 
             planCard.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
             planCard.setGravity(Gravity.TOP);
@@ -236,6 +243,20 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
 
             Log.e(TAG, "景区：" + planPlace.getText().toString() + "-----时间："
                     + planTime.getText().toString());
+
+           /* //将新设置的汇率写到SP里
+            SharedPreferences sharedPreferences = getSharedPreferences("myplan", Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("planPlace", planPlace.getText().toString());
+            editor.putString("planTime", planTime.getText().toString());
+            editor.putString("planMedi", planMedi.getText().toString());
+            editor.putString("planCloth", planCloth.getText().toString());
+            editor.putString("planCard", planCard.getText().toString());
+            editor.putString("planSun", planSun.getText().toString());
+            editor.putString("planRain", planRain.getText().toString());
+            editor.putString("planOther", planOther.getText().toString());
+            editor.commit();
+            Log.i(TAG, "onActivityResult: 数据已保存到sharedPreferences");  */
         }
     }
 }
