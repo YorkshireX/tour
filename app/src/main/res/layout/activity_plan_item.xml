@@ -45,10 +45,11 @@
                 android:text="景区:"
                 android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/et_plan_place"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <Spinner
+                android:entries="@array/ctype"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/spinnerPlan" />
         </LinearLayout>
 
         <LinearLayout

@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class explorePage extends AppCompatActivity {
 
@@ -27,7 +28,6 @@ public class explorePage extends AppCompatActivity {
         ListAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
         listView.setAdapter(adapter);
     }
-
 
 
 

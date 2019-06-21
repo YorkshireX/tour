@@ -20,6 +20,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.SimpleAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -220,6 +221,18 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
             planOther.setGravity(Gravity.TOP);
             planOther.setSingleLine(false);
             planOther.setHorizontallyScrolling(false);
+
+            Spinner spinner=(Spinner)childAtPlan.findViewById(R.id.spinnerPlan);
+            spinner.getSelectedItem();
+            spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> parent, View v, int pos, long id) {
+                    String result=parent.getItemAtPosition(pos).toString();
+                    Log.i("Spinner实例", result);
+                }
+                public void onNothingSelected(AdapterView<?> arg0) {
+                    // TODO Auto-generated method stub
+                }
+            });
 
             Log.e(TAG, "景区：" + planPlace.getText().toString() + "-----时间："
                     + planTime.getText().toString());

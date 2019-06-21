@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ctype">
+        <item>洛带古镇</item>
+        <item>安仁古镇</item>
+        <item>黄龙溪古镇</item>
+        <item>街子古镇</item>
+        <item>怀远古镇</item>
+        <item>悦来古镇</item>
+    </string-array>
+</resources>

@@ -7,12 +7,14 @@ import android.text.InputType;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RatingBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -105,15 +107,27 @@ public class tiezi extends AppCompatActivity implements View.OnClickListener {
     private void printData() {
         for (int i = 0; i < addTieziNameView.getChildCount(); i++) {
             View childAt = addTieziNameView.getChildAt(i);
-            EditText tieziName = (EditText) childAt.findViewById(R.id.ed_tieziName);
             RatingBar tieziEvaluateStart = (RatingBar) childAt.findViewById(R.id.rb_tiezi_evaluate);
             EditText tieziEvaluate = (EditText) childAt.findViewById(R.id.ed_tieziEvaluate);
             tieziEvaluate.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
             tieziEvaluate.setGravity(Gravity.TOP);
             tieziEvaluate.setSingleLine(false);
             tieziEvaluate.setHorizontallyScrolling(false);
-            Log.e(TAG, "景区：" + tieziName.getText().toString() + "-----评价星数："
+
+            Spinner spinner=(Spinner)childAt.findViewById(R.id.spinnerTiezi);
+            spinner.getSelectedItem();
+            spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> parent, View v, int pos, long id) {
+                    String result=parent.getItemAtPosition(pos).toString();
+                    Log.i("Spinner实例", result);
+                }
+                public void onNothingSelected(AdapterView<?> arg0) {
+                    // TODO Auto-generated method stub
+                }
+            });
+            Log.e(TAG, "景区：" +spinner + "-----评价星数："
                     + (int) tieziEvaluateStart.getRating() + "-----服务评价：" + tieziEvaluate.getText().toString());
+
         }
     }
 
