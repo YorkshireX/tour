@@ -1,6 +1,7 @@
 package cn.edu.swufe.tour;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,9 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -123,6 +127,28 @@ public class tiezi extends AppCompatActivity implements View.OnClickListener {
             tieziPlace.setGravity(Gravity.TOP);
             tieziPlace.setSingleLine(false);
             tieziPlace.setHorizontallyScrolling(false);
+
+            String text1 = tieziPlace.getText().toString();
+            String text2 = tieziEvaluate.getText().toString();
+            String text3 = tieziEvaluateStart.toString();
+            SharedPreferences.Editor editor = getSharedPreferences("data",
+                    MODE_PRIVATE).edit();
+            editor.putString("TZplace", text1);
+            editor.putString("TZpingjia", text2);
+            editor.putString("TZstar", text3);
+            editor.commit();
+
+
+                    SharedPreferences pref = getSharedPreferences("data",
+                    MODE_PRIVATE);
+            String place = pref.getString("TZplace", "");
+            String pingjia = pref.getString("TZpingjia", "");
+            String star = pref.getString("TZstar", "");
+            Log.d("tiezi", "place is " + place);
+            Log.d("tiezi", "pingjia is " + pingjia);
+            Log.d("tiezi", "star is " + star);
+
+
 
             Spinner spinnerTiezi = (Spinner)childAt.findViewById(R.id.spinnerTiezi);
 

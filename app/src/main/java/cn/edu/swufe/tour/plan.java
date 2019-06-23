@@ -182,6 +182,7 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
 
     private void printDataPlan() {
         for (int i = 0; i < addPlanNameView.getChildCount(); i++) {
+            List<GuZhenItem> rateList = new ArrayList<GuZhenItem>();
             View childAtPlan = addPlanNameView.getChildAt(i);
             EditText planPlace = (EditText) childAtPlan.findViewById(R.id.et_plan_place);
             EditText planTime = (EditText) childAtPlan.findViewById(R.id.et_plan_time);
@@ -244,6 +245,57 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
             planOther.setSingleLine(false);
             planOther.setHorizontallyScrolling(false);
 
+            String text1 = planPlace.getText().toString();
+            String text2 = planTime.getText().toString();
+            String text3 = planRoute.getText().toString();
+            String text4 = planTicket.getText().toString();
+            String text5 = planMedi.getText().toString();
+            String text6 = planCloth.getText().toString();
+            String text7 = planCard.getText().toString();
+            String text8 = planSun.getText().toString();
+            String text9 = planRain.getText().toString();
+            String text10 = planOther.getText().toString();
+
+            SharedPreferences.Editor editor = getSharedPreferences("data",
+                    MODE_PRIVATE).edit();
+            editor.putString("planplace", text1);
+            editor.putString("plantime", text2);
+            editor.putString("planroute", text3);
+            editor.putString("planticket", text4);
+            editor.putString("planmedi", text5);
+            editor.putString("plancloth", text6);
+            editor.putString("plancard", text7);
+            editor.putString("plansun", text8);
+            editor.putString("planrain", text9);
+            editor.putString("planother", text10);
+            editor.commit();
+
+
+            SharedPreferences pref = getSharedPreferences("data",
+                    MODE_PRIVATE);
+            String place = pref.getString("planplace", text1);
+            String time = pref.getString("plantime", text2);
+            String route = pref.getString("planroute", text3);
+            String ticket = pref.getString("planticket", text4);
+            String medi = pref.getString("planmedi", text5);
+            String cloth = pref.getString("plancloth", text6);
+            String card = pref.getString("plancard", text7);
+            String sun = pref.getString("plansun", text8);
+            String rain = pref.getString("planrain", text9);
+            String other = pref.getString("planother", text10);
+
+            Log.d("plan", "place is " + place);
+            Log.d("plan", "time is " + time);
+            Log.d("plan", "route is " + route);
+            Log.d("plan", "ticket is " + ticket);
+            Log.d("plan", "medi is " + medi);
+            Log.d("plan", "cloth is " + cloth);
+            Log.d("plan", "card is " + card);
+            Log.d("plan", "sun is " + sun);
+            Log.d("plan", "rain is " + rain);
+            Log.d("plan", "other is " + other);
+
+
            final Spinner spinner=(Spinner)childAtPlan.findViewById(R.id.spinnerPlan);
           //  final Spinner spinnerGZ = (Spinner) childAtPlan.findViewById(R.id.spinnerGuzhen);
             spinner.getSelectedItem();
@@ -258,6 +310,12 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
             });
 
             Log.e(TAG, "景区："  +"-----时间：" + planTime.getText().toString());
+
+            DBManager dbManager = new DBManager(plan.this);
+            dbManager.deleteAll();
+            Log.i("db","删除所有记录");
+            dbManager.addAll(rateList);
+            Log.i("db","添加新记录集");
 
            /* //将新设置的汇率写到SP里
             SharedPreferences sharedPreferences = getSharedPreferences("myplan", Activity.MODE_PRIVATE);
