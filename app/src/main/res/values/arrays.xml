@@ -1,11 +1,664 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="ctype">
+    <string-array name="city">
+        <item>河南</item>
+        <item>四川</item>
+        <item>安徽</item>
+        <item>浙江</item>
+        <item>江西</item>
+        <item>江苏</item>
+        <item>山西</item>
+        <item>云南</item>
+        <item>贵州</item>
+        <item>福建</item>
+        <item>广西</item>
+        <item>广东</item>
+        <item>重庆</item>
+        <item>湖南</item>
+        <item>山东</item>
+        <item>陕西</item>
+        <item>上海</item>
+        <item>河北</item>
+        <item>北京</item>
+        <item>湖北</item>
+        <item>台湾</item>
+    </string-array>
+
+    <string-array name="henan">
+        <item>赊店古镇</item>
+        <item>朱仙镇</item>
+        <item>荆紫关古镇</item>
+        <item>芒山镇</item>
+        <item>神垕镇</item>
+        <item>道口镇</item>
+        <item>关林镇</item>
+        <item>北舞渡镇</item>
+        <item>古荥镇</item>
+        <item>会盟镇</item>
+    </string-array>
+
+    <string-array name="ct_henan">
+        <item>https://baike.baidu.com/item/赊店古镇/8688327?fr=aladdin</item>
+        <item>https://baike.baidu.com/item/朱仙镇/83009</item>
+        <item>https://baike.baidu.com/item/荆紫关镇/10981662?fromtitle=%E8%8D%86%E7%B4%AB%E5%85%B3&amp;fromid=3336379</item>
+        <item>https://baike.baidu.com/item/芒山镇</item>
+        <item>https://baike.baidu.com/item/神垕镇</item>
+        <item>https://baike.baidu.com/item/道口镇/10885842</item>
+        <item>https://baike.baidu.com/item/关林镇</item>
+        <item>https://baike.baidu.com/item/北舞渡镇</item>
+        <item>https://baike.baidu.com/item/古荥镇</item>
+        <item>https://baike.baidu.com/item/会盟镇</item>
+    </string-array>
+
+    <string-array name="sichuan">
         <item>洛带古镇</item>
-        <item>安仁古镇</item>
         <item>黄龙溪古镇</item>
         <item>街子古镇</item>
-        <item>怀远古镇</item>
+        <item>孝泉古镇</item>
+        <item>平乐古镇</item>
+        <item>上里古镇</item>
+        <item>龙隐古镇</item>
+        <item>阆中古镇</item>
+        <item>老观古镇</item>
+        <item>仙市古镇</item>
+        <item>李庄古镇</item>
+        <item>罗泉古镇</item>
+        <item>佛宝古镇</item>
+        <item>尧坝古镇</item>
+        <item>江口古镇</item>
+        <item>铁佛古镇</item>
+        <item>三道堰古镇</item>
+        <item>西来古镇</item>
+        <item>夕佳山古镇</item>
+        <item>郪江古镇</item>
+        <item>龙华古镇</item>
+        <item>恩阳古镇</item>
+        <item>罗城古镇</item>
+        <item>磨西古镇</item>
         <item>悦来古镇</item>
+        <item>怀远古镇</item>
+        <item>元通古镇</item>
+        <item>桃坪古镇</item>
+        <item>昭化古镇</item>
+        <item>柳江古镇</item>
+        <item>周子古镇</item>
+        <item>安仁古镇</item>
+        <item>肖溪古镇</item>
+        <item>太平古镇</item>
+        <item>福宝古镇</item>
+        <item>水磨古镇</item>
+        <item>泰安古镇</item>
+    </string-array>
+
+    <string-array name="ct_sichuan">
+        <item>https://baike.baidu.com/item/洛带古镇</item>
+        <item>https://baike.baidu.com/item/黄龙溪古镇</item>
+        <item>https://baike.baidu.com/item/街子古镇</item>
+        <item>https://baike.baidu.com/item/孝泉镇/6901280</item>
+        <item>https://baike.baidu.com/item/平乐古镇/483565</item>
+        <item>https://baike.baidu.com/item/上里镇?fromtitle=%E4%B8%8A%E9%87%8C%E5%8F%A4%E9%95%87&amp;fromid=5848219</item>
+        <item>https://baike.baidu.com/item/龙隐镇/2990006</item>
+        <item>https://baike.baidu.com/item/阆中古城?fromtitle=%E9%98%86%E4%B8%AD%E5%8F%A4%E9%95%87&amp;fromid=11015716</item>
+        <item>https://baike.baidu.com/item/老观镇/10976290?fr=aladdin</item>
+        <item>https://baike.baidu.com/item/仙市古镇</item>
+        <item>https://baike.baidu.com/item/李庄古镇</item>
+        <item>https://baike.baidu.com/item/罗泉古镇</item>
+        <item>https://baike.baidu.com/item/佛宝古镇</item>
+        <item>https://baike.baidu.com/item/尧坝古镇</item>
+        <item>https://baike.baidu.com/item/江口古镇</item>
+        <item>https://baike.baidu.com/item/铁佛古镇</item>
+        <item>https://baike.baidu.com/item/三道堰古镇</item>
+        <item>https://baike.baidu.com/item/西来古镇</item>
+        <item>https://baike.baidu.com/item/夕佳山镇/4896713</item>
+        <item>https://baike.baidu.com/item/郪江古镇</item>
+        <item>https://baike.baidu.com/item/龙华古镇</item>
+        <item>https://baike.baidu.com/item/恩阳古镇</item>
+        <item>https://baike.baidu.com/item/罗城古镇</item>
+        <item>https://baike.baidu.com/item/磨西古镇</item>
+        <item>https://baike.baidu.com/item/悦来古镇</item>
+        <item>https://baike.baidu.com/item/怀远古镇</item>
+        <item>https://baike.baidu.com/item/元通古镇</item>
+        <item>https://baike.baidu.com/item/桃坪羌寨</item>
+        <item>https://baike.baidu.com/item/昭化古镇</item>
+        <item>https://baike.baidu.com/item/柳江古镇</item>
+        <item>https://baike.baidu.com/item/周子古镇/9542631</item>
+        <item>https://baike.baidu.com/item/安仁古镇</item>
+        <item>https://baike.baidu.com/item/肖溪古镇</item>
+        <item>https://baike.baidu.com/item/太平古镇</item>
+        <item>https://baike.baidu.com/item/福宝古镇</item>
+        <item>https://baike.baidu.com/item/水磨古镇</item>
+        <item>https://baike.baidu.com/item/泰安古镇</item>
+    </string-array>
+
+    <string-array name="anhui">
+        <item>桃花潭古镇</item>
+        <item>三河古镇</item>
+        <item>西河古镇</item>
+        <item>大通古镇</item>
+        <item>赤滩古镇</item>
+        <item>徽州古村镇（西递、宏村、唐模、呈坎、南屏、龙川、渔梁坝等）</item>
+    </string-array>
+
+    <string-array name="ct_anhui">
+        <item>https://baike.baidu.com/item/桃花潭/8578966</item>
+        <item>https://baike.baidu.com/item/三河古镇/5846288</item>
+        <item>https://baike.baidu.com/item/西河古镇</item>
+        <item>https://baike.baidu.com/item/大通镇/7011225</item>
+        <item>https://baike.baidu.com/item/赤滩古镇</item>
+        <item>https://baike.baidu.com/item/皖南古村落</item>
+    </string-array>
+
+    <string-array name="zhejiang">
+        <item>南浔古镇</item>
+        <item>乌镇</item>
+        <item>西塘古镇</item>
+        <item>安昌古镇</item>
+        <item>古堰画乡</item>
+        <item>龙门古镇</item>
+        <item>塘栖古镇</item>
+        <item>前童古镇</item>
+        <item>佛堂古镇</item>
+        <item>新市古镇</item>
+        <item>鸣鹤古镇</item>
+        <item>皤滩古镇</item>
+        <item>盐官古镇</item>
+        <item>廿八都古镇</item>
+        <item>慈城古镇</item>
+        <item>东沙古镇</item>
+        <item>东浦古镇</item>
+        <item>崇仁古镇</item>
+        <item>郭洞古镇</item>
+    </string-array>
+
+    <string-array name="ct_zhejiang">
+        <item>https://baike.baidu.com/item/南浔古镇</item>
+        <item>https://baike.baidu.com/item/乌镇/5314</item>
+        <item>https://baike.baidu.com/item/西塘古镇</item>
+        <item>https://baike.baidu.com/item/安昌古镇</item>
+        <item>https://baike.baidu.com/item/古堰画乡景区?fromtitle=%E5%8F%A4%E5%A0%B0%E7%94%BB%E4%B9%A1&amp;fromid=5892319</item>
+        <item>https://baike.baidu.com/item/杭州龙门古镇?fromtitle=%E9%BE%99%E9%97%A8%E5%8F%A4%E9%95%87&amp;fromid=427034</item>
+        <item>https://baike.baidu.com/item/塘栖镇?fromtitle=%E5%A1%98%E6%A0%96%E5%8F%A4%E9%95%87&amp;fromid=17713278</item>
+        <item>https://baike.baidu.com/item/前童古镇</item>
+        <item>https://baike.baidu.com/item/佛堂古镇</item>
+        <item>https://baike.baidu.com/item/新市古镇</item>
+        <item>https://baike.baidu.com/item/鸣鹤古镇</item>
+        <item>https://baike.baidu.com/item/皤滩古镇</item>
+        <item>https://baike.baidu.com/item/盐官古城/2397585</item>
+        <item>https://baike.baidu.com/item/廿八都古镇</item>
+        <item>https://baike.baidu.com/item/慈城镇?fromtitle=%E6%85%88%E5%9F%8E%E5%8F%A4%E9%95%87&amp;fromid=8028830</item>
+        <item>https://baike.baidu.com/item/东沙镇/1808638</item>
+        <item>https://baike.baidu.com/item/东浦/7871632</item>
+        <item>https://baike.baidu.com/item/崇仁古镇</item>
+        <item>https://baike.baidu.com/item/郭洞/5839891</item>
+    </string-array>
+
+    <string-array name="jiangxi">
+        <item>徽州婺源古村镇（篁岭、江湾、李坑、思溪延村、汪口、上下晓起、庆源等）</item>
+        <item>瑶里古镇</item>
+        <item>景德镇</item>
+        <item>樟树镇</item>
+        <item>吴城镇</item>
+        <item>安义古镇</item>
+        <item>鄱阳古镇</item>
+        <item>婺源古镇</item>
+    </string-array>
+
+    <string-array name="ct_jiangxi">
+        <item>https://baike.baidu.com/item/婺源古村落/10926426</item>
+        <item>https://baike.baidu.com/item/瑶里古镇</item>
+        <item>https://baike.baidu.com/item/景德镇/5667</item>
+        <item>https://baike.baidu.com/item/樟树镇/8895567</item>
+        <item>https://baike.baidu.com/item/吴城镇/4407252</item>
+        <item>https://baike.baidu.com/item/安义古村/3882107</item>
+        <item>https://baike.baidu.com/item/鄱阳镇/1017695</item>
+        <item>https://baike.baidu.com/item/婺源古镇</item>
+    </string-array>
+
+    <string-array name="jiangsu">
+        <item>同里古镇</item>
+        <item>周庄古镇</item>
+        <item>木渎古镇</item>
+        <item>沙家浜古镇</item>
+        <item>锦溪古镇</item>
+        <item>惠山古镇</item>
+        <item>荡口古镇</item>
+        <item>甪直古镇</item>
+        <item>千灯古镇</item>
+        <item>窑湾古镇</item>
+        <item>沙溪古镇</item>
+        <item>震泽古镇</item>
+        <item>浏河古镇</item>
+        <item>黎里古镇</item>
+        <item>河下古镇</item>
+        <item>溱潼古镇</item>
+        <item>柴墟古镇</item>
+        <item>邵伯古镇</item>
+        <item>铜罗古镇</item>
+        <item>南京东门古镇	</item>
+        <item>车桥古镇</item>
+    </string-array>
+
+    <string-array name="ct_jiangsu">
+        <item>https://baike.baidu.com/item/同里古镇</item>
+        <item>https://baike.baidu.com/item/周庄古镇</item>
+        <item>https://baike.baidu.com/item/木渎古镇</item>
+        <item>https://baike.baidu.com/item/沙家浜镇/10044912</item>
+        <item>https://baike.baidu.com/item/锦溪古镇</item>
+        <item>https://baike.baidu.com/item/惠山古镇</item>
+        <item>https://baike.baidu.com/item/荡口古镇</item>
+        <item>https://baike.baidu.com/item/甪直古镇</item>
+        <item>https://baike.baidu.com/item/千灯古镇</item>
+        <item>https://baike.baidu.com/item/窑湾古镇</item>
+        <item>https://baike.baidu.com/item/沙溪古镇/30978</item>
+        <item>https://baike.baidu.com/item/震泽古镇</item>
+        <item>https://baike.baidu.com/item/浏河古镇</item>
+        <item>https://baike.baidu.com/item/黎里镇/8137993</item>
+        <item>https://baike.baidu.com/item/河下古镇</item>
+        <item>https://baike.baidu.com/item/溱潼镇/4050282?fromtitle=%E6%BA%B1%E6%BD%BC&amp;fromid=4177494</item>
+        <item>https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;tn=baidu&amp;wd=%E6%9F%B4%E5%A2%9F%E5%8F%A4%E9%95%87&amp;oq=%25E6%25B3%25B0%25E5%25B7%259E%25E6%259F%25B4%25E5%25A2%259F%25E5%258F%25A4%25E9%2595%2587%25E4%25BB%258B%25E7%25BB%258D&amp;rsv_pq=a93928c6001848b8&amp;rsv_t=b205PY1QS9ShpzPXKY6%2BwEsRbLmkR4IO93MCmhHd%2BkrMw6w%2BESbVTBBubEM&amp;rqlang=cn&amp;rsv_enter=0&amp;rsv_sug3=7&amp;rsv_sug1=8&amp;rsv_sug7=100</item>
+        <item>https://baike.baidu.com/item/邵伯古镇/22849775?fr=aladdin</item>
+        <item>https://you.ctrip.com/sight/wujiang1017/1486295.html</item>
+        <item>https://baike.baidu.com/item/南京东门古镇/8668276?fr=aladdin	</item>
+        <item>https://baike.baidu.com/item/车桥镇/9478874?fr=aladdin</item>
+    </string-array>
+
+    <string-array name="shanxi1">
+        <item>平遥古城</item>
+        <item>张壁村</item>
+        <item>乔家大院</item>
+        <item>常家庄园</item>
+        <item>曹家大院</item>
+        <item>王家大院</item>
+        <item>渠家大院</item>
+        <item>郭峪</item>
+        <item>后沟古村</item>
+        <item>皇城相府</item>
+        <item>娘子关村</item>
+        <item>孟门</item>
+        <item>榆次老城</item>
+        <item>师家沟</item>
+        <item>润城镇</item>
+        <item>晋祠镇</item>
+        <item>碛口</item>
+        <item>李家大院</item>
+        <item>西文兴村</item>
+        <item>汾城镇</item>
+        <item>丁村</item>
+    </string-array>
+
+    <string-array name="ct_shanxi1">
+        <item>https://baike.baidu.com/item/平遥古城/791</item>
+        <item>https://baike.baidu.com/item/张壁村/689581</item>
+        <item>https://baike.baidu.com/item/乔家大院/5844</item>
+        <item>https://baike.baidu.com/item/常家庄园</item>
+        <item>https://baike.baidu.com/item/曹家大院</item>
+        <item>https://baike.baidu.com/item/王家大院</item>
+        <item>https://baike.baidu.com/item/渠家大院</item>
+        <item>https://baike.baidu.com/item/郭峪</item>
+        <item>https://baike.baidu.com/item/后沟古村</item>
+        <item>https://baike.baidu.com/item/皇城相府/77820</item>
+        <item>https://baike.baidu.com/item/娘子关村</item>
+        <item>https://baike.baidu.com/item/孟门</item>
+        <item>https://baike.baidu.com/item/榆次老城</item>
+        <item>https://baike.baidu.com/item/师家沟</item>
+        <item>https://baike.baidu.com/item/润城镇</item>
+        <item>https://baike.baidu.com/item/晋祠镇</item>
+        <item>https://baike.baidu.com/item/碛口/1355467</item>
+        <item>https://baike.baidu.com/item/李家大院/63259</item>
+        <item>https://baike.baidu.com/item/西文兴村/10981756</item>
+        <item>https://baike.baidu.com/item/汾城镇</item>
+        <item>https://baike.baidu.com/item/丁村/492169</item>
+    </string-array>
+
+    <string-array name="yunnan">
+        <item>和顺古镇</item>
+        <item>束河古镇</item>
+        <item>沙溪古镇</item>
+        <item>官渡古镇</item>
+        <item>白沙古镇</item>
+        <item>喜洲古镇</item>
+        <item>黑井古镇</item>
+        <item>鲁史古镇</item>
+        <item>云南驿古镇</item>
+        <item>双廊镇</item>
+        <item>丽江</item>
+        <item>大理</item>
+        <item>香格里拉</item>
+        <item>泸沽湖</item>
+        <item>石屏</item>
+        <item>虎跳峡</item>
+        <item>新华村</item>
+        <item>剑川</item>
+        <item>巍山</item>
+        <item>诺邓</item>
+    </string-array>
+
+    <string-array name="ct_yunnan">
+        <item>https://baike.baidu.com/item/和顺古镇</item>
+        <item>https://baike.baidu.com/item/束河古镇/1529871</item>
+        <item>https://baike.baidu.com/item/沙溪古镇/30978</item>
+        <item>https://baike.baidu.com/item/官渡古镇</item>
+        <item>https://baike.baidu.com/item/白沙古镇/9178334</item>
+        <item>https://baike.baidu.com/item/喜洲古镇</item>
+        <item>https://baike.baidu.com/item/黑井古镇</item>
+        <item>https://baike.baidu.com/item/鲁史古镇</item>
+        <item>https://baike.baidu.com/item/驿古镇/10554319</item>
+        <item>https://baike.baidu.com/item/双廊镇</item>
+        <item>https://baike.baidu.com/item/丽江/121726</item>
+        <item>https://baike.baidu.com/item/大理白族自治州/2916136?fromtitle=%E5%A4%A7%E7%90%86&amp;fromid=32237</item>
+        <item>https://baike.baidu.com/item/香格里拉/5785</item>
+        <item>https://baike.baidu.com/item/泸沽湖/396555</item>
+        <item>https://baike.baidu.com/item/石屏县/1201811?fromtitle=%E7%9F%B3%E5%B1%8F&amp;fromid=5753365</item>
+        <item>https://baike.baidu.com/item/虎跳峡</item>
+        <item>https://baike.baidu.com/item/新华村/15100654</item>
+        <item>https://baike.baidu.com/item/剑川县?fromtitle=%E5%89%91%E5%B7%9D&amp;fromid=146373</item>
+        <item>https://baike.baidu.com/item/巍山彝族回族自治县?fromtitle=%E5%B7%8D%E5%B1%B1&amp;fromid=6105617</item>
+        <item>https://baike.baidu.com/item/诺邓村?fromtitle=%E8%AF%BA%E9%82%93&amp;fromid=10284520</item>
+    </string-array>
+
+    <string-array name="guizhou">
+        <item>青岩古镇</item>
+        <item>丙安古镇</item>
+        <item>旧州古镇</item>
+        <item>下司古镇</item>
+        <item>隆里古镇</item>
+        <item>土城古镇</item>
+        <item>镇远古镇</item>
+    </string-array>
+
+    <string-array name="ct_guizhou">
+        <item>https://baike.baidu.com/item/青岩古镇</item>
+        <item>https://baike.baidu.com/item/丙安古镇</item>
+        <item>https://baike.baidu.com/item/旧州古镇</item>
+        <item>https://baike.baidu.com/item/下司古镇</item>
+        <item>https://baike.baidu.com/item/隆里古城?fromtitle=%E9%9A%86%E9%87%8C%E5%8F%A4%E9%95%87&amp;fromid=10650096</item>
+        <item>https://baike.baidu.com/item/土城古镇</item>
+        <item>https://baike.baidu.com/item/镇远古镇</item>
+    </string-array>
+
+    <string-array name="fujian">
+        <item>云水谣古镇</item>
+        <item>霍童古镇</item>
+        <item>嵩口古镇</item>
+        <item>和平古镇</item>
+        <item>五夫古镇（朱熹故里）</item>
+        <item>客家古镇</item>
+        <item>长汀古城</item>
+        <item>泰宁古城</item>
+        <item>芷溪古镇</item>
+        <item>培田古村</item>
+        <item>南靖</item>
+        <item>崇武古城</item>
+        <item>赵家堡</item>
+        <item>二宜楼</item>
+        <item>洪坑村</item>
+        <item>城村</item>
+        <item>下梅古镇</item>
+        <item>坂东</item>
+        <item>田螺坑</item>
+    </string-array>
+
+    <string-array name="ct_fujian">
+        <item>https://baike.baidu.com/item/云水谣/6290187?fromtitle=%E4%BA%91%E6%B0%B4%E8%B0%A3%E5%8F%A4%E9%95%87&amp;fromid=1156653</item>
+        <item>https://baike.baidu.com/item/霍童古镇</item>
+        <item>https://baike.baidu.com/item/嵩口古镇</item>
+        <item>https://baike.baidu.com/item/和平古镇</item>
+        <item>https://baike.baidu.com/item/五夫镇/9374315</item>
+        <item>https://baike.baidu.com/item/客家古镇/17622508</item>
+        <item>https://baike.baidu.com/item/长汀古城/1993572</item>
+        <item>https://baike.baidu.com/item/泰宁古城</item>
+        <item>https://baike.baidu.com/item/福建省连城县芷溪古镇景区/4956130</item>
+        <item>https://baike.baidu.com/item/培田古村/1267226</item>
+        <item>https://baike.baidu.com/item/南靖县/3450996</item>
+        <item>https://baike.baidu.com/item/崇武古城/471888</item>
+        <item>https://baike.baidu.com/item/赵家堡</item>
+        <item>https://baike.baidu.com/item/二宜楼/530401?fr=aladdin</item>
+        <item>https://baike.baidu.com/item/洪坑村/7850297</item>
+        <item>https://baike.baidu.com/item/城村</item>
+        <item>https://baike.baidu.com/item/下梅古镇/10341660</item>
+        <item>https://baike.baidu.com/item/坂东/1918664</item>
+        <item>https://baike.baidu.com/item/田螺坑村?fromtitle=%E7%94%B0%E8%9E%BA%E5%9D%91&amp;fromid=10982795</item>
+    </string-array>
+
+    <string-array name="guangxi">
+        <item>黄姚古镇</item>
+        <item>兴坪古镇</item>
+        <item>大圩古镇</item>
+        <item>中渡古镇</item>
+        <item>阳朔</item>
+        <item>兴安古镇</item>
+        <item>三江古镇</item>
+        <item>扬美古镇</item>
+        <item>江头洲</item>
+        <item>龙胜</item>
+    </string-array>
+
+    <string-array name="ct_guangxi">
+        <item>https://baike.baidu.com/item/黄姚古镇</item>
+        <item>https://baike.baidu.com/item/兴坪古镇</item>
+        <item>https://baike.baidu.com/item/大圩古镇</item>
+        <item>https://baike.baidu.com/item/中渡古镇</item>
+        <item>https://baike.baidu.com/item/阳朔兴坪古镇?fromtitle=%E9%98%B3%E6%9C%94%E5%8F%A4%E9%95%87&amp;fromid=15477889</item>
+        <item>https://baike.baidu.com/item/兴安古镇</item>
+        <item>https://baike.baidu.com/item/三江古镇</item>
+        <item>https://baike.baidu.com/item/扬美古镇</item>
+        <item>https://baike.baidu.com/item/江头洲/11015202</item>
+        <item>https://baike.baidu.com/item/龙胜各族自治县?fromtitle=%E9%BE%99%E8%83%9C&amp;fromid=598596</item>
+    </string-array>
+
+    <string-array name="guangdong">
+        <item>沙湾古镇</item>
+        <item>赤坎古镇</item>
+        <item>大鹏所城</item>
+        <item>石湾</item>
+        <item>赤坎</item>
+        <item>大江埔</item>
+        <item>桥溪村</item>
+        <item>苏家围</item>
+        <item>大旗头</item>
+        <item>从化</item>
+        <item>樟林</item>
+        <item>黄埔</item>
+        <item>逢简</item>
+        <item>钱岗</item>
+        <item>梅州</item>
+        <item>石头村</item>
+    </string-array>
+
+    <string-array name="ct_guangdong">
+        <item>https://baike.baidu.com/item/沙湾古镇</item>
+        <item>https://baike.baidu.com/item/赤坎镇?fromtitle=%E8%B5%A4%E5%9D%8E%E5%8F%A4%E9%95%87&amp;fromid=6332066</item>
+        <item>https://baike.baidu.com/item/大鹏所城/10484179</item>
+        <item>https://baike.baidu.com/item/石湾镇/9892736</item>
+        <item>https://baike.baidu.com/item/赤坎镇?fromtitle=%E5%BC%80%E5%B9%B3%E8%B5%A4%E5%9D%8E%E5%8F%A4%E9%95%87&amp;fromid=4308761</item>
+        <item>https://baike.baidu.com/item/大江埔</item>
+        <item>https://baike.baidu.com/item/桥溪村/5257051</item>
+        <item>https://baike.baidu.com/item/苏家围</item>
+        <item>https://baike.baidu.com/item/大旗头</item>
+        <item>https://baike.baidu.com/item/从化区/13020007?fromtitle=%E4%BB%8E%E5%8C%96&amp;fromid=26018</item>
+        <item>https://baike.baidu.com/item/樟林</item>
+        <item>https://baike.baidu.com/item/黄埔/10162681</item>
+        <item>https://baike.baidu.com/item/逢简村?fromtitle=%E9%80%A2%E7%AE%80&amp;fromid=8773514</item>
+        <item>https://baike.baidu.com/item/钱岗</item>
+        <item>https://baike.baidu.com/item/梅州/2554831</item>
+        <item>https://baike.baidu.com/item/石头村/3255469</item>
+    </string-array>
+
+    <string-array name="chongqing">
+        <item>磁器口古镇</item>
+        <item>安居古镇（安居古城）</item>
+        <item>涞滩古镇</item>
+        <item>万灵古镇</item>
+        <item>濯水古镇</item>
+        <item>龙兴古镇</item>
+        <item>松溉古镇</item>
+        <item>洪安古镇（边城）</item>
+        <item>丰盛古镇</item>
+        <item>白沙古镇</item>
+        <item>双江古镇</item>
+        <item>中山古镇</item>
+        <item>龚滩古镇（三峡工程蓄水后重建）</item>
+        <item>大昌古镇（三峡工程蓄水后重建）</item>
+        <item>宁厂古镇</item>
+    </string-array>
+
+    <string-array name="ct_chongqing">
+        <item>https://baike.baidu.com/item/磁器口古镇</item>
+        <item>https://baike.baidu.com/item/安居古镇/1253739</item>
+        <item>https://baike.baidu.com/item/涞滩古镇</item>
+        <item>https://baike.baidu.com/item/万灵古镇</item>
+        <item>https://baike.baidu.com/item/濯水古镇</item>
+        <item>https://baike.baidu.com/item/龙兴古镇</item>
+        <item>https://baike.baidu.com/item/松溉古镇/1528528</item>
+        <item>https://baike.baidu.com/item/洪安古镇</item>
+        <item>https://baike.baidu.com/item/丰盛古镇</item>
+        <item>https://baike.baidu.com/item/白沙古镇/9178334</item>
+        <item>https://baike.baidu.com/item/双江古镇</item>
+        <item>https://baike.baidu.com/item/中山古镇/28368</item>
+        <item>https://baike.baidu.com/item/龚滩古镇</item>
+        <item>https://baike.baidu.com/item/大昌古镇</item>
+        <item>https://baike.baidu.com/item/宁厂古镇</item>
+    </string-array>
+
+    <string-array name="hunan">
+        <item>芙蓉镇</item>
+        <item>靖港古镇</item>
+        <item>洪江古商城</item>
+        <item>浦市古镇</item>
+        <item>茶峒古镇（边城）</item>
+        <item>里耶古镇</item>
+        <item>德夯</item>
+        <item>滩头</item>
+        <item>乾州古镇</item>
+        <item>张谷英村</item>
+    </string-array>
+
+    <string-array name="ct_hunan">
+        <item>https://baike.baidu.com/item/芙蓉镇/5616145#viewPageContent</item>
+        <item>https://baike.baidu.com/item/靖港古镇</item>
+        <item>https://baike.baidu.com/item/洪江古商城/10989187</item>
+        <item>https://baike.baidu.com/item/浦市镇/1338001</item>
+        <item>https://you.ctrip.com/travels/hunan100053/2886106.html</item>
+        <item>https://baike.baidu.com/item/里耶古城/6304914?fromtitle=%E9%87%8C%E8%80%B6%E5%8F%A4%E9%95%87&amp;fromid=1676204&amp;fr=aladdin</item>
+        <item>https://baike.baidu.com/item/德夯风景名胜区?fromtitle=%E5%BE%B7%E5%A4%AF&amp;fromid=994531</item>
+        <item>https://baike.baidu.com/item/滩头镇</item>
+        <item>https://baike.baidu.com/item/乾州古城/8418033</item>
+        <item>https://baike.baidu.com/item/张谷英村</item>
+    </string-array>
+
+    <string-array name="shandong">
+        <item>台儿庄</item>
+        <item>周村古商城</item>
+    </string-array>
+
+    <string-array name="ct_shandong">
+        <item>https://baike.baidu.com/item/台儿庄古城/9354187?fromtitle=%E5%8F%B0%E5%84%BF%E5%BA%84&amp;fromid=19237544</item>
+        <item>https://baike.baidu.com/item/周村古商城/10671966</item>
+    </string-array>
+
+    <string-array name="shanxi3">
+        <item>党家村</item>
+        <item>米脂姜氏庄园</item>
+        <item>榆林古城</item>
+        <item>吴堡古城</item>
+        <item>漫川关古镇</item>
+    </string-array>
+
+    <string-array name="ct_shanxi3">
+        <item>https://baike.baidu.com/item/党家村</item>
+        <item>https://baike.baidu.com/item/姜氏庄园/9415802</item>
+        <item>https://baike.baidu.com/item/榆林古城/1114622</item>
+        <item>https://baike.baidu.com/item/吴堡古城</item>
+        <item>https://baike.baidu.com/item/漫川关古镇</item>
+    </string-array>
+
+    <string-array name="shanghai">
+        <item>朱家角古镇</item>
+        <item>枫泾古镇</item>
+        <item>新场古镇</item>
+        <item>七宝古镇</item>
+        <item>南翔古镇</item>
+        <item>练塘老街</item>
+        <item>泗泾古镇</item>
+    </string-array>
+
+    <string-array name="ct_shanghai">
+        <item>https://baike.baidu.com/item/朱家角镇/1171226</item>
+        <item>https://baike.baidu.com/item/枫泾古镇</item>
+        <item>https://baike.baidu.com/item/新场古镇/81186</item>
+        <item>https://baike.baidu.com/item/七宝古镇</item>
+        <item>https://baike.baidu.com/item/南翔古镇</item>
+        <item>https://baike.baidu.com/item/练塘老街/6633984</item>
+        <item>https://baike.baidu.com/item/泗泾镇</item>
+    </string-array>
+
+    <string-array name="hebei">
+        <item>于家村</item>
+        <item>正定鸡鸣驿</item>
+    </string-array>
+
+    <string-array name="ct_hebei">
+        <item>https://baike.baidu.com/item/于家村/36548</item>
+        <item>https://baike.baidu.com/item/鸡鸣驿</item>
+    </string-array>
+
+    <string-array name="beijing">
+        <item>爨底下</item>
+    </string-array>
+
+    <string-array name="ct_beijing">
+        <item>https://baike.baidu.com/item/爨底下村?fromtitle=%E7%88%A8%E5%BA%95%E4%B8%8B&amp;fromid=6495825</item>
+    </string-array>
+
+    <string-array name="hubei">
+        <item>鱼木寨</item>
+        <item>上津古镇（上津古城）</item>
+    </string-array>
+
+    <string-array name="ct_hubei">
+        <item>https://baike.baidu.com/item/鱼木寨</item>
+        <item>https://baike.baidu.com/item/上津古城/3524326</item>
+    </string-array>
+
+    <string-array name="taiwan">
+        <item>九份镇</item>
+        <item>埔里小镇</item>
+        <item>芹壁聚落</item>
+        <item>集集火车站</item>
+        <item>车埕镇</item>
+        <item>金门民俗文化村</item>
+        <item>将军第</item>
+        <item>伊达邵</item>
+        <item>珠山聚落</item>
+        <item>菁桐火车站</item>
+        <item>北埔小镇</item>
+        <item>鹿港</item>
+        <item>布农部落</item>
+        <item>集集小镇</item>
+        <item>凤仪门</item>
+        <item>东港镇</item>
+        <item>阿美族文化中心</item>
+        <item>台湾原住民文化园区</item>
+    </string-array>
+
+    <string-array name="ct_taiwan">
+        <item>https://baike.baidu.com/item/九份/11030580?fr=aladdin</item>
+        <item>http://m.mayi.com/taiwan_blxz_sight</item>
+        <item>http://m.mayi.com/taiwan_qbjl_sight</item>
+        <item>http://m.mayi.com/taiwan_jjhcz_sight</item>
+        <item>m.mayi.com/taiwan_ccz_sight</item>
+        <item>http://m.mayi.com/taiwan_jmmswhc_sight</item>
+        <item>http://m.mayi.com/taiwan_jjd_sight</item>
+        <item>http://m.mayi.com/taiwan_yds_sight</item>
+        <item>http://m.mayi.com/taiwan_zsjl_sight</item>
+        <item>http://m.mayi.com/taiwan_jthcz_sight</item>
+        <item>http://m.mayi.com/taiwan_bbxz_sight</item>
+        <item>http://m.mayi.com/taiwan_lg_sight</item>
+        <item>http://m.mayi.com/taiwan_bnbl_sight</item>
+        <item>http://m.mayi.com/taiwan_jjxz_sight</item>
+        <item>m.mayi.com/taiwan_fym_sight</item>
+        <item>http://m.mayi.com/taiwan_dgz_sight</item>
+        <item>http://m.mayi.com/taiwan_amzwhzx_sight</item>
+        <item>http://m.mayi.com/taiwan_twyzmwhyq_sight</item>
     </string-array>
 </resources>

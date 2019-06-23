@@ -54,7 +54,7 @@ public class planAdapter extends BaseAdapter {
         if (convertView == null) {
             vh = new ViewHolder();
             convertView = View.inflate(context, R.layout.activity_plan_item, null);
-            vh.et_plan_place = (EditText) convertView.findViewById(R.id.et_plan_place);
+          //  vh.et_plan_place = (EditText) convertView.findViewById(R.id.et_plan_place);
             vh.et_plan_time = (EditText) convertView.findViewById(R.id.et_plan_time);
             vh.et_plan_medi = (EditText) convertView.findViewById(R.id.et_plan_medi);
             vh.et_plan_cloth = (EditText) convertView.findViewById(R.id.et_plan_cloth);
@@ -90,8 +90,8 @@ public class planAdapter extends BaseAdapter {
         vh.et_plan_card.setTag(position);//设置editext一个标记
         vh.et_plan_other.setTag(position);//设置editext一个标记
 
-        vh.et_plan_place.clearFocus();//清除焦点  不清除的话因为item复用的原因   多个Editext同时改变
-        vh.et_plan_place.setText(saveMap.get(position));//将对应保存在集合中的文本内容取出来  并显示上去
+        vh.et_plan_time.clearFocus();//清除焦点  不清除的话因为item复用的原因   多个Editext同时改变
+       // vh.et_plan_place.setText(saveMap.get(position));//将对应保存在集合中的文本内容取出来  并显示上去
         vh.et_plan_card.setText(saveMap.get(position));//将对应保存在集合中的文本内容取出来  并显示上去
         vh.et_plan_cloth.setText(saveMap.get(position));//将对应保存在集合中的文本内容取出来  并显示上去
         vh.et_plan_medi.setText(saveMap.get(position));//将对应保存在集合中的文本内容取出来  并显示上去

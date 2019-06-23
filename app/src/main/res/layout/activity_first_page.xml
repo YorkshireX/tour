@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,40 +18,26 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:text="成都周边古镇"
+            android:text="中国古镇"
             android:textSize="24sp"/>
 
     </RelativeLayout>
 
-    <ListView
-        android:id="@+id/list_place"
-        android:layout_width="386dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
-
-
-    </ListView>
-
-    <LinearLayout
+    <Spinner
+        android:entries="@array/city"
+        android:id="@+id/spinnerCC"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="wrap_content">
+    </Spinner>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="100dp"
+        android:layout_below="@+id/relativeLayout"
+        android:numColumns="3"
+        android:id="@+id/mylist"/>
 
 
-        <ImageButton
-            android:id="@+id/btn_explore"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="28dp"
-            android:background="@android:color/holo_orange_light"
-            android:onClick="openEx"
-            android:src="@mipmap/explore" />
-
-    </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
 

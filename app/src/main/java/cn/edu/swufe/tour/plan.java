@@ -180,7 +180,6 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
     private void printDataPlan() {
         for (int i = 0; i < addPlanNameView.getChildCount(); i++) {
             View childAtPlan = addPlanNameView.getChildAt(i);
-            EditText planPlace = (EditText) childAtPlan.findViewById(R.id.et_plan_place);
             EditText planTime = (EditText) childAtPlan.findViewById(R.id.et_plan_time);
             EditText planMedi = (EditText) childAtPlan.findViewById(R.id.et_plan_medi);
             EditText planCloth = (EditText) childAtPlan.findViewById(R.id.et_plan_cloth);
@@ -188,11 +187,6 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
             EditText planSun = (EditText) childAtPlan.findViewById(R.id.et_plan_sun);
             EditText planRain = (EditText) childAtPlan.findViewById(R.id.et_plan_rain);
             EditText planOther = (EditText) childAtPlan.findViewById(R.id.et_plan_other);
-
-            planPlace.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
-            planPlace.setGravity(Gravity.TOP);
-            planPlace.setSingleLine(false);
-            planPlace.setHorizontallyScrolling(false);
 
             planTime.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
             planTime.setGravity(Gravity.TOP);
@@ -241,8 +235,7 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
                 }
             });
 
-            Log.e(TAG, "景区：" + planPlace.getText().toString() + "-----时间："
-                    + planTime.getText().toString());
+            Log.e(TAG, "景区："  + "-----时间：" + planTime.getText().toString());
 
            /* //将新设置的汇率写到SP里
             SharedPreferences sharedPreferences = getSharedPreferences("myplan", Activity.MODE_PRIVATE);

@@ -2,6 +2,8 @@ package cn.edu.swufe.tour;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Bundle;
@@ -12,16 +14,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -44,11 +44,375 @@ public class firstPage extends AppCompatActivity {
   //  private List<PlaceInfo> placeList=new ArrayList<>();
     private ListView list_plsce = null;
 
+    private Spinner spinner;
+    private GridView gridview;
+    private List<Map<String,Object>> dataList;
+    private SimpleAdapter adapter;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
 
-        list_plsce = (ListView)findViewById(R.id.list_place);
+        final GridView gridview = (GridView) findViewById(R.id.mylist);
+
+        Resources res =getResources();
+        String[] city=res.getStringArray(R.array.city);
+        //将province中内容添加到数组city中
+        spinner = (Spinner) findViewById(R.id.spinnerCC);
+        //获取到spacer1
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,city);
+        //创建Arrayadapter适配器
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {//通过此方法为下拉列表设置点击事件
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String text= spinner.getItemAtPosition(i).toString();
+                if(text.equals("河南")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.henan);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_henan);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("四川")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.sichuan);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_sichuan);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("安徽")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.anhui);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_anhui);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("浙江")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.zhejiang);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_zhejiang);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("江西")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.jiangxi);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_jiangxi);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("江苏")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.jiangsu);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_jiangsu);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("山西")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.shanxi1);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_shanxi1);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("云南")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.yunnan);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_yunnan);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("贵州")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.guizhou);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_guizhou);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("福建")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.fujian);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_fujian);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("广西")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.guangxi);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_guangxi);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("广东")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.guangdong);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_guangdong);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("重庆")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.chongqing);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_chongqing);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("湖南")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.hunan);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_hunan);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("山东")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.shandong);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_shandong);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("陕西")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.shanxi3);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_shanxi3);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("上海")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.shanghai);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_shanghai);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("河北")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.hebei);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_hebei);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("北京")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.beijing);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_beijing);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("湖北")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.hubei);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_hubei);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }else if(text.equals("台湾")){
+                    Resources resp =getResources();
+                    String[] guzheng = resp.getStringArray(R.array.taiwan);
+                    ListAdapter gadapter = new ArrayAdapter<String>(firstPage.this,android.R.layout.simple_list_item_1,guzheng);
+                    gridview.setAdapter(gadapter);
+
+                    gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Resources resp =getResources();
+                            String[] citiao = resp.getStringArray(R.array.ct_taiwan);
+                            Uri uri = Uri.parse(citiao[position]);
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                    });
+                }
+                // Toast.makeText(MainActivity.this,text,Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+    /*    list_plsce = (ListView)findViewById(R.id.list_place);
         final String[] name = new String[] {"洛带古镇","安仁古镇","黄龙溪古镇","街子古镇","怀远古镇","悦来古镇"};
         final String[] message = new String[]{"洛带古镇地处成都市龙泉驿区境内，是成都“东山五场”之一，被誉为“中国西部客家第一镇” [1-2]  。\n" +
                 "洛带古镇是四川省打造“两湖一山”旅游区的重点景区、国家AAAA级旅游景区、全国首批重点小城镇、成都市重点保护镇、成都文化旅游发展优先镇、省级历史文化名镇、全国“亿万农民健身活动先进镇”。作为世界客属第二十届恳亲大会的核心分会场之一，洛带被世人称之为“世界的洛带、永远的客家”，“天下客家”的定位也得以确立。\n" +
@@ -127,7 +491,7 @@ public class firstPage extends AppCompatActivity {
                 Intent explore = new Intent(firstPage.this, explorePage.class);
                 startActivity(explore);
             }
-        });
+        });  */
 
       // ListView  list_place = (ListView) findViewById(R.id.list_place);
        //list_place.setAdapter(adapter);
@@ -155,14 +519,14 @@ public class firstPage extends AppCompatActivity {
 
 
 
-    public void openEx(View btn){
+    /*public void openEx(View btn){
         Log.i("open","openEx");
         openExplore();
     }
     private void openExplore(){
         Intent explore = new Intent(this,explorePage.class);
         startActivity(explore);
-    }
+    }  */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
