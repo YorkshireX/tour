@@ -1,15 +1,15 @@
 package cn.edu.swufe.tour;
 
 
-public class PlaceInfo {
+public class  PlaceInfo {
 
-    private String placeAddress;
+    private String placeMessage;
     private int imageId;
     private String placeName;
 
-    public PlaceInfo(String placeName,String placeAddress,int imageId){
+    public PlaceInfo(String placeName,String placeMessage,int imageId){
         this.placeName = placeName;
-        this.placeAddress = placeAddress;
+        this.placeMessage = placeMessage;
         this.imageId = imageId;
     }
 
@@ -17,8 +17,8 @@ public class PlaceInfo {
         return placeName;
     }
 
-    public String getPlaceAddress(){
-        return placeAddress;
+    public String getPlaceMessage(){
+        return placeMessage;
     }
 
     public int getImageId(){

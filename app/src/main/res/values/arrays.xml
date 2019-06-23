@@ -136,7 +136,7 @@
         <item>西河古镇</item>
         <item>大通古镇</item>
         <item>赤滩古镇</item>
-        <item>徽州古村镇（西递、宏村、唐模、呈坎、南屏、龙川、渔梁坝等）</item>
+        <item>徽州古村镇</item>
     </string-array>
 
     <string-array name="ct_anhui">
@@ -193,7 +193,7 @@
     </string-array>
 
     <string-array name="jiangxi">
-        <item>徽州婺源古村镇（篁岭、江湾、李坑、思溪延村、汪口、上下晓起、庆源等）</item>
+        <item>徽州婺源古村镇</item>
         <item>瑶里古镇</item>
         <item>景德镇</item>
         <item>樟树镇</item>

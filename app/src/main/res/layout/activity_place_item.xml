@@ -6,44 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".place_item">
 
-    <TextView
-        android:id="@+id/place_name"
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="palce"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_below="@id/lin1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="41dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="18dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:text="palce"
-        android:textSize="30sp" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/place_message"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="address"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/place_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
 
 
-    <TextView
-        android:id="@+id/place_address"
-        android:layout_width="235dp"
-        android:layout_height="62dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="75dp"
-        android:text="address"
-        android:textSize="20sp" />
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/place_image"
-        android:layout_width="116dp"
-        android:layout_height="83dp"
-        android:layout_alignTop="@+id/place_address"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="-58dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginRight="27dp" />
+
 
 </RelativeLayout>

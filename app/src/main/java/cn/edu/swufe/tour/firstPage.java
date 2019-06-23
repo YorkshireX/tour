@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
@@ -40,7 +41,7 @@ import static android.content.ContentValues.TAG;
 
 public class firstPage extends AppCompatActivity {
 
-    private ImageButton btn_explore;
+    private Button chinaRank;
   //  private List<PlaceInfo> placeList=new ArrayList<>();
     private ListView list_plsce = null;
 
@@ -52,6 +53,18 @@ public class firstPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
+
+       /* chinaRank.findViewById(R.id.chinaRank);
+        chinaRank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //在按钮响应函数中添加如下两句话就ok了
+                Intent intent=new Intent(firstPage.this,place.class);
+                startActivity(intent);
+            }
+        });  */
+
+
 
         final GridView gridview = (GridView) findViewById(R.id.mylist);
 
@@ -519,14 +532,14 @@ public class firstPage extends AppCompatActivity {
 
 
 
-    /*public void openEx(View btn){
+   /* public void openEx(View btn){
         Log.i("open","openEx");
         openExplore();
     }
     private void openExplore(){
-        Intent explore = new Intent(this,explorePage.class);
+        Intent explore = new Intent(this,place.class);
         startActivity(explore);
-    }  */
+    } */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

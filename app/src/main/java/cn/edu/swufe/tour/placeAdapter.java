@@ -22,10 +22,10 @@ public class placeAdapter extends ArrayAdapter<PlaceInfo> {
         View view= LayoutInflater.from(getContext()).inflate(resourceId,null);
         ImageView placeImage=(ImageView)view.findViewById(R.id.place_image);
         TextView placeName=(TextView) view.findViewById(R.id.place_name);
-        TextView placeAddress=(TextView) view.findViewById(R.id.place_address);
+        TextView placeMessage=(TextView) view.findViewById(R.id.place_message);
         placeImage.setImageResource(placeInfo.getImageId());
         placeName.setText(placeInfo.getPlaceName());
-        placeAddress.setText(placeInfo.getPlaceAddress());
+        placeMessage.setText(placeInfo.getPlaceMessage());
 
         return view;
     }
