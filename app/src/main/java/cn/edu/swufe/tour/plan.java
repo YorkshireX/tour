@@ -7,6 +7,8 @@ import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +28,7 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -180,7 +183,10 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
     private void printDataPlan() {
         for (int i = 0; i < addPlanNameView.getChildCount(); i++) {
             View childAtPlan = addPlanNameView.getChildAt(i);
+            EditText planPlace = (EditText) childAtPlan.findViewById(R.id.et_plan_place);
             EditText planTime = (EditText) childAtPlan.findViewById(R.id.et_plan_time);
+            EditText planRoute = (EditText) childAtPlan.findViewById(R.id.et_plan_route);
+            EditText planTicket = (EditText) childAtPlan.findViewById(R.id.et_plan_ticket);
             EditText planMedi = (EditText) childAtPlan.findViewById(R.id.et_plan_medi);
             EditText planCloth = (EditText) childAtPlan.findViewById(R.id.et_plan_cloth);
             EditText planCard = (EditText) childAtPlan.findViewById(R.id.et_plan_card);
@@ -188,10 +194,25 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
             EditText planRain = (EditText) childAtPlan.findViewById(R.id.et_plan_rain);
             EditText planOther = (EditText) childAtPlan.findViewById(R.id.et_plan_other);
 
+            planPlace.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+            planPlace.setGravity(Gravity.TOP);
+            planPlace.setSingleLine(false);
+            planPlace.setHorizontallyScrolling(false);
+
             planTime.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
             planTime.setGravity(Gravity.TOP);
             planTime.setSingleLine(false);
             planTime.setHorizontallyScrolling(false);
+
+            planRoute.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+            planRoute.setGravity(Gravity.TOP);
+            planRoute.setSingleLine(false);
+            planRoute.setHorizontallyScrolling(false);
+
+            planTicket.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+            planTicket.setGravity(Gravity.TOP);
+            planTicket.setSingleLine(false);
+            planTicket.setHorizontallyScrolling(false);
 
             planMedi.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
             planMedi.setGravity(Gravity.TOP);
@@ -223,19 +244,20 @@ public class plan extends AppCompatActivity implements View.OnClickListener {
             planOther.setSingleLine(false);
             planOther.setHorizontallyScrolling(false);
 
-            Spinner spinner=(Spinner)childAtPlan.findViewById(R.id.spinnerPlan);
+           final Spinner spinner=(Spinner)childAtPlan.findViewById(R.id.spinnerPlan);
+          //  final Spinner spinnerGZ = (Spinner) childAtPlan.findViewById(R.id.spinnerGuzhen);
             spinner.getSelectedItem();
             spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> parent, View v, int pos, long id) {
-                    String result=parent.getItemAtPosition(pos).toString();
-                    Log.i("Spinner实例", result);
+                    String text= spinner.getItemAtPosition(pos).toString();
+                    Log.i("Spinner实例", text);
                 }
                 public void onNothingSelected(AdapterView<?> arg0) {
                     // TODO Auto-generated method stub
                 }
             });
 
-            Log.e(TAG, "景区："  + "-----时间：" + planTime.getText().toString());
+            Log.e(TAG, "景区："  +"-----时间：" + planTime.getText().toString());
 
            /* //将新设置的汇率写到SP里
             SharedPreferences sharedPreferences = getSharedPreferences("myplan", Activity.MODE_PRIVATE);

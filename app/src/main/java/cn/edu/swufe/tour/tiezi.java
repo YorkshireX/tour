@@ -1,6 +1,7 @@
 package cn.edu.swufe.tour;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -15,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -109,27 +112,71 @@ public class tiezi extends AppCompatActivity implements View.OnClickListener {
             View childAt = addTieziNameView.getChildAt(i);
             RatingBar tieziEvaluateStart = (RatingBar) childAt.findViewById(R.id.rb_tiezi_evaluate);
             EditText tieziEvaluate = (EditText) childAt.findViewById(R.id.ed_tieziEvaluate);
+            EditText tieziPlace = (EditText) childAt.findViewById(R.id.ed_tieziPlace);
+
             tieziEvaluate.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
             tieziEvaluate.setGravity(Gravity.TOP);
             tieziEvaluate.setSingleLine(false);
             tieziEvaluate.setHorizontallyScrolling(false);
 
-            Spinner spinner=(Spinner)childAt.findViewById(R.id.spinnerTiezi);
-            spinner.getSelectedItem();
-            spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            tieziPlace.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+            tieziPlace.setGravity(Gravity.TOP);
+            tieziPlace.setSingleLine(false);
+            tieziPlace.setHorizontallyScrolling(false);
+
+            Spinner spinnerTiezi = (Spinner)childAt.findViewById(R.id.spinnerTiezi);
+
+            Resources resp =getResources();
+             String[] STiezi = resp.getStringArray(R.array.city);
+           /*  String[][] STZGZ = {resp.getStringArray(R.array.henan),resp.getStringArray(R.array.sichuan),resp.getStringArray(R.array.anhui),resp.getStringArray(R.array.zhejiang),
+                    resp.getStringArray(R.array.jiangxi),resp.getStringArray(R.array.jiangsu),resp.getStringArray(R.array.shanxi1),resp.getStringArray(R.array.yunnan),
+                    resp.getStringArray(R.array.guizhou),resp.getStringArray(R.array.fujian),resp.getStringArray(R.array.guangxi),resp.getStringArray(R.array.chongqing),
+                    resp.getStringArray(R.array.hunan),resp.getStringArray(R.array.shandong),resp.getStringArray(R.array.shanxi3),resp.getStringArray(R.array.shanghai),
+                    resp.getStringArray(R.array.hebei),resp.getStringArray(R.array.beijing),resp.getStringArray(R.array.hubei)}; */
+
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, STiezi);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+
+
+
+
+
+
+           /* spinnerTiezi.getSelectedItem();
+            spinnerTiezi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 public void onItemSelected(AdapterView<?> parent, View v, int pos, long id) {
-                    String result=parent.getItemAtPosition(pos).toString();
-                    Log.i("Spinner实例", result);
+                    String spinnerPro=(String)spinnerTiezi.getItemAtPosition(pos);
+                    Log.i("Spinner实例", spinnerPro);
                 }
                 public void onNothingSelected(AdapterView<?> arg0) {
                     // TODO Auto-generated method stub
                 }
             });
-            Log.e(TAG, "景区：" +spinner + "-----评价星数："
+
+
+            spinnerTZGZ.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    String guzValue = (String) spinnerTZGZ.getItemAtPosition(position);
+                    }
+
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        spinnerTZGZ.setSelection(0);
+                    }
+            });  */
+
+
+
+            Log.e(TAG, "景区：" +tieziPlace + "-----评价星数："
                     + (int) tieziEvaluateStart.getRating() + "-----服务评价：" + tieziEvaluate.getText().toString());
 
         }
     }
+
 
 
 }
